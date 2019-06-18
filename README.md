@@ -1,2 +1,2 @@
 # jokumer.github.io
-GitHub Pages xxx
+GitHub Pages
