@@ -1,16 +1,14 @@
-<html class=" nbcmpc idc0_346">
+<!DOCTYPE html>
+<html lang="de-DE">
 <head>
-
+    <meta charset="utf-8"/>
     <title>ETDO</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://jokumer.github.io/b867453wv7eb/assets/images/logo.png">
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://jokumer.github.io/b867453wv7eb/assets/images/_drawings/logo.png">
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" media="all" href="https://jokumer.github.io/b867453wv7eb/assets/default.css" data-turbolinks-track="reload">
-    <script src="https://jokumer.github.io/b867453wv7eb/assets/application.js" data-turbolinks-track="reload" defer="defer"></script>
+
 </head>
 
 <body>
@@ -19,8 +17,8 @@
 <div class="navbar-container">
 
     <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
-        <a class="navbar-brand" href="https://jokumer.github.io/b867453wv7eb/home">
-            <img src="https://jokumer.github.io/b867453wv7eb/assets/images/logo.png">
+        <a class="navbar-brand" href="https://jokumer.github.io/b867453wv7eb/">
+            <img src="https://jokumer.github.io/b867453wv7eb/assets/images/_drawings/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,16 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-link">
-                    <a id="home" href="https://jokumer.github.io/b867453wv7eb/home">Home</a>
-                </li>
-                <!-- <li class="nav-link">
-                  <a id="about" href="https://jokumer.github.io/b867453wv7eb/about">Über uns</a>
-                </li> -->
-                <li class="nav-link">
-                    <a id="courses" href="https://jokumer.github.io/b867453wv7eb/courses">Kurse</a>
+                    <a id="home" href="https://jokumer.github.io/b867453wv7eb/">Home</a>
                 </li>
                 <li class="nav-link">
-                    <a id="instructors" href="https://jokumer.github.io/b867453wv7eb/instructors">Instruktoren</a>
+                    <a id="courses" href="https://jokumer.github.io/b867453wv7eb/courses/index.html">Kurse</a>
+                </li>
+                <li class="nav-link">
+                    <a id="instructors" href="https://jokumer.github.io/b867453wv7eb/instructors/index.html">Instruktoren</a>
                 </li>
             </ul>
         </div>
@@ -47,49 +42,239 @@
 </div>
 
 <div class="page-content">
-    <div class="general-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path 'Kurse.jpg'%>)">
-	</div>
-	<div class="trapezoid">
-		<div class="banner-container">
-			<h2 class="general-banner-header">KURSORGANIGRAMM</h2>
-			<div class="zoom">
-				<%= image_tag "orga.png" %>
-			</div>
-		</div>
-	</div>
-	<div class="general-container">
-		<div class="header">
-			<h1>Kursübersicht</h1>
-		</div>
+    <div class="general-banner"
+         style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_photos/kurse.jpg)">
+    </div>
+    <div class="trapezoid">
+        <div class="banner-container">
+            <h2 class="general-banner-header">KURSORGANIGRAMM</h2>
+            <div class="zoom">
+                <img src="https://jokumer.github.io/b867453wv7eb/assets/images/_drawings/orga.png">
+            </div>
+        </div>
+    </div>
+    <div class="general-container">
+        <div class="header">
+            <h1>Kursübersicht</h1>
+        </div>
 
-		<div class="cards">
-			<% @courses.each do |course| %>
-				<% if course.thumbnail.attached? %>
-					<%= link_to course_path(course) do %>
-						<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path course.thumbnail.key %>')">
-							<%= render 'shared/course-card-grid', course: course %>
-						</div>
-					<% end %>
-				<% else %>
-					<%= link_to course_path(course) do %>
-						<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path 'default.png'%>)">
-							<%= render 'shared/course-card-grid', course: course %>
-						</div>
-					<% end %>
-				<% end %>
-			<% end %>
-		</div>
+        <div class="cards">
+            <a href="nitrox-sport-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/nitrox.jpg)">
+                    Nitrox Sport Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="tec-nitrox-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/tec-nitrox.jpg)">
+                    Tec Nitrox Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="decompression-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/decompression-diver-x.jpg)">
+                    Decompression Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="accelerated-decompression-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/accelerated-dd-x.jpg)">
+                    Accelerated Decompression Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="trimix-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/trimix-diver-x.jpg)">
+                    Trimix Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="sc-rebreather-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/scr.jpg)">
+                    SC Rebreather Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="cc-rebreather-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/ccr.jpg)">
+                    CC Rebreather Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="ccr-decompression-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/ccr-dd-x.jpg)">
+                    CCR Decompression Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="ccr-trimix-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/ccr-tmx-x.jpg)">
+                    CCR Trimix Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="cave-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/cave-x.jpg)">
+                    Cave Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="full-cave-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/full-cave-x.jpg)">
+                    Full Cave Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="tec-wreck-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/tec-wreck.jpg)">
+                    Tec Wreck Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="full-wreck-diver.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/full-wreck.jpg)">
+                    Full Wreck Diver
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="gasblender.html">
+                <div class="card-category"
+                     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://jokumer.github.io/b867453wv7eb/assets/images/_courses/gasblender.jpg)">
+                    Gasblender
+                    <div class="detail-box">
+                        <div class="details-text">
+                            <p>DETAILS</p>
+                        </div>
+                        <div class="detail-arrow-right">
+                            <i>></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-		<%= render "shared/arrow-up" %>
-	</div>
+        <div class="text-center" style="margin: 40px">
+            <div class="back-to-top">
+                <a href="#lp-top">
+                    <div id="arrow-down">
+                        <img alt="alttext" src="https://jokumer.github.io/b867453wv7eb/assets/images/_drawings/arrow-circle-up-solid.svg">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="footer">
     <div class="primary-container">
         <div class="footer-links">
-            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/disclaimer">Disclaimer</a></div>
-            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/imprint">Impressum</a></div>
-            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/data-protection">Datenschutz</a></div>
+            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/disclaimer.html">Disclaimer</a></div>
+            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/imprint.html">Impressum</a></div>
+            <div class="spacing"><a href="https://jokumer.github.io/b867453wv7eb/data-protection.html">Datenschutz</a></div>
         </div>
         <br><br>
         <div class="social-share-btn">
